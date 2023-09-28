@@ -1,0 +1,7 @@
+@props(['value' => 1, 'name' => 'inputToggle', 'descripcion' => 'Buscar todo'])
+<label class="relative inline-flex items-center mb-4 cursor-pointer btn-toggle-{{ $name }}">
+    <input type="checkbox" {{ $value == 1 ? 'checked' : ''}} value="{{ $value ?? 1 }}" name="{{ $name ?? 'inputToggle' }}" id="{{ $name ?? 'inputToggle' }}" class="sr-only peer">
+    <!-- <div class="w-13 h-7 bg-blue-600 rounded-full peer peer-focus:ring-4 peer-focus:ring-gray-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-green-600 text-white font-semibold"></div> -->
+    <div class="w-11 h-6 bg-blue-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-gray-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-green-600 "></div>
+    <span class="txt-toggle-{{ $name }} ml-3 text-sm font-medium text-gray-900 dark:text-gray-300 txt-toggle-span-{{ $name }} select-none">{{ $descripcion }}</span>
+</label>

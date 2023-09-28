@@ -1,0 +1,99 @@
+.columna-izquierda {
+    @apply hidden flex-1  overflow-hidden bg-slate-100 dark:bg-slate-900 lg:block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    /* Aplicar la animación y duración */
+    animation: backgroundAnimation 30s infinite linear;
+  }
+
+@keyframes backgroundAnimation {
+    0% {
+      background-image: url('../../../public/img/zonanube/login/login-fondo-1.jpg');
+    }
+    16.66% {
+      background-image: url('../../../public/img/zonanube/login/login-fondo-2.jpg');
+    }
+    33.33% {
+      background-image: url('../../../public/img/zonanube/login/login-fondo-3.jpg');
+    }
+    50% {
+      background-image: url('../../../public/img/zonanube/login/login-fondo-4.jpg');
+    }
+    66.66% {
+      background-image: url('../../../public/img/zonanube/login/login-fondo-5.jpg');
+    }
+    83.33% {
+      background-image: url('../../../public/img/zonanube/login/login-fondo-6.jpg');
+    }
+    100% {
+      background-image: url('../../../public/img/zonanube/login/login-fondo-1.jpg');
+    }
+  }
+.loginwrapper {
+  @apply flex w-full items-center overflow-hidden;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  height: 100vh;
+  flex-basis: 100%;
+
+  .lg-inner-column {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    @apply flex w-full flex-wrap overflow-y-auto;
+  }
+
+  .right-column {
+    @apply flex-1;
+  }
+  .black-500-title {
+    @apply text-[40px] leading-[48px] text-white;
+  }
+}
+
+.auth-box {
+  @apply mx-auto w-full max-w-[524px] p-7  md:px-[42px] md:py-[44px];
+  h4 {
+    @apply mb-3 text-2xl text-slate-900 dark:text-white;
+  }
+}
+.auth-box2 {
+  @apply mx-auto w-full  max-w-[524px]  p-7 md:px-[42px] md:py-[44px];
+  h4 {
+    @apply mb-3 text-2xl text-slate-900 dark:text-white;
+  }
+}
+.auth-box-3 {
+  h4 {
+    @apply mb-3 text-2xl text-slate-900 dark:text-white;
+  }
+}
+.auth-footer {
+  @apply z-[999] pb-10 text-xs font-normal text-secondary-500 dark:text-slate-400;
+}
+
+.auth-box-3 {
+  @apply relative mr-auto ml-auto h-auto  w-full max-w-[520px] bg-white p-10 dark:bg-slate-800 md:rounded-md lg:mr-[150px];
+}
+
+.logo-box-3 {
+  @apply flex min-h-screen items-center justify-center;
+}
+.v3-right-column {
+  @apply flex flex-col items-center justify-center;
+}
+.auth-footer3 {
+  @apply absolute bottom-0 hidden lg:block;
+}
+
+.light {
+  .white_logo {
+    @apply hidden;
+  }
+}
+.dark {
+  .dark_logo {
+    @apply hidden;
+  }
+}

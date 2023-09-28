@@ -1,0 +1,218 @@
+/*
+ |--------------------------------------------------------------------------
+ | TailwindCSS Directives
+ |--------------------------------------------------------------------------
+ |
+ | Import TailwindCSS directives and swipe out at build-time with all of
+ | the styles it generates based on your configured design system.
+ |
+ | Please check this link for more details:
+ | https://tailwindcss.com/docs/installation#include-tailwind-in-your-css
+ |
+ */
+/*
+ ! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
+ */
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+
+:root {
+    --color-primary: 30 58 138;
+    --color-secondary: 226 232 240;
+    --color-success: 13 148 136;
+    --color-info: 6 182 212;
+    --color-warning: 245 158 11;
+    --color-pending: 249 115 22;
+    --color-danger: 185 28 28;
+    --color-light: 241 245 249;
+    --color-dark: 30 41 59;
+    --color-login: 255 255 255;
+    --color-inicio: 30 58 138;
+    --color-slate-50: 248 250 252;
+    --color-slate-100: 241 245 249;
+    --color-slate-200: 226 232 240;
+    --color-slate-300: 203 213 225;
+    --color-slate-400: 148 163 184;
+    --color-slate-500: 100 116 139;
+    --color-slate-600: 71 85 105;
+    --color-slate-700: 51 65 85;
+    --color-slate-800: 30 41 59;
+    --color-slate-900: 15 23 42;
+}
+
+@-webkit-keyframes intro-x-animation {
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes intro-x-animation {
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes intro-y-animation {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes intro-y-animation {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media (max-width: calc(640px - 1px)) {
+    .modal.modal-slide-over.show > .modal-dialog .modal-content > [data-tw-dismiss="modal"]{
+        margin-left: -2.5rem;
+    }
+    .pagination{
+        margin-right: 0px;
+        width: 100%;
+    }
+    .pagination .page-item{
+        flex: 1 1 0%;
+    }
+        .pagination .page-item:nth-child(1) .page-link, .pagination .page-item:nth-child(2) .page-link, .pagination .page-item:nth-child(3) .page-link, .pagination .page-item:nth-child(7) .page-link, .pagination .page-item:nth-child(8) .page-link, .pagination .page-item:nth-child(9) .page-link{
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+    .pagination .page-item .page-link{
+        margin-right: 0px;
+        min-width: 0px;
+    }
+  }
+/*
+ |--------------------------------------------------------------------------
+ | Components
+ |--------------------------------------------------------------------------
+ |
+ | Import CSS/SCSS components.
+ |
+ */
+
+ /* Estilos globales si los tienes */
+
+.logo-container {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: 300px; /* Ajusta el ancho máximo del contenedor del logo (puedes cambiar el valor según tus necesidades) */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 16px 0; /* Espacio de margen superior e inferior, ajusta según tus necesidades */
+  }
+
+  .logo {
+    width: 100%; /* Asegura que el logo ocupe todo el ancho del contenedor */
+    height: auto; /* Permite que la altura del logo se ajuste automáticamente para mantener la proporción */
+    display: block; /* Elimina el espacio en blanco alrededor del logo */
+    border-radius: 50%; /* Aplica un borde redondeado para que el logo sea circular (si lo deseas) */
+  }
+
+
+.main{
+    background-image: url(../images/bg-main.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0.75rem 2rem;
+}
+.login:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin-top: -28%;
+    margin-bottom: -15%;
+    margin-left: -13%;
+    width: 57%;
+    --tw-rotate: -4deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    border-radius: 100%;
+    background-color: rgb(var(--color-primary) / 0.2);
+}
+
+@media (max-width: calc(1280px - 1px)) {
+  .login:before{
+      display: none;
+  }
+}
+
+.login:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: -20%;
+  margin-bottom: -12%;
+  margin-left: -13%;
+  width: 57%;
+  --tw-rotate: -4deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 100%; /* Ajusta el valor del border-radius según lo desees */
+  --tw-bg-opacity: 1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  animation: changeBackground 30s infinite; /* Duración y repetición de la animación */
+}
+
+
+@keyframes changeBackground {
+    0% {
+        background-image: url('../img/zonanube/login/login-fondo-1.jpg');
+    }
+    16.66% {
+        background-image: url('../img/zonanube/login/login-fondo-2.jpg');
+    }
+    33.33% {
+        background-image: url('../img/zonanube/login/login-fondo-3.jpg');
+    }
+    50% {
+        background-image: url('../img/zonanube/login/login-fondo-4.jpg');
+    }
+    66.66% {
+        background-image: url('../img/zonanube/login/login-fondo-5.jpg');
+    }
+    83.33% {
+        background-image: url('../img/zonanube/login/login-fondo-6.jpg');
+    }
+    100% {
+        background-image: url('../img/zonanube/login/login-fondo-1.jpg'); /* Vuelve a la primera imagen */
+    }
+}
+
+
+@media (max-width: calc(1280px - 1px)) {
+    .login:after{
+        display: none;
+    }
+  }
+.login .login__input {
+        min-width: 350px;
+    }
+@media (max-width: calc(1280px - 1px)) {
+    .login .login__input{
+        min-width: 100%;
+    }
+  }

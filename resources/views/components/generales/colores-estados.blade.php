@@ -1,0 +1,2 @@
+<div class="bg-zn-amarillo is-invalid !border-green-500 bg-zn-activo bg-zn-inactivo bg-zn-blanco border-none resize"></div>
+<textarea class="resize rounded-md h-fit ml-8 hover:text-orange-500"></textarea>

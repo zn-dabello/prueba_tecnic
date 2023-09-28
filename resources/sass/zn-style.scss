@@ -1,0 +1,25 @@
+
+.zn-estado {
+    @apply text-center font-semibold text-white text-sm mr-2 px-2.5 py-0.5 rounded;
+}
+.zn-estado-activo {
+    @apply text-center font-semibold text-white text-sm mr-2 px-2.5 py-0.5 rounded bg-zn-activo;
+}
+.zn-estado-inactivo {
+    @apply text-center font-semibold text-white text-sm mr-2 px-2.5 py-0.5 rounded bg-zn-inactivo;
+}
+.zn-estado-naranjo {
+    @apply text-center font-semibold text-white text-sm mr-2 px-2.5 py-0.5 rounded bg-zn-naranjo;
+}
+.zn-estado-blanco {
+    @apply text-center font-semibold text-white text-sm mr-2 px-2.5 py-0.5 rounded bg-zn-blanco;
+}
+.zn-estado-rojo {
+    @apply text-center font-semibold text-white text-sm mr-2 px-2.5 py-0.5 rounded bg-zn-rojo;
+}
+.zn-estado-amarillo {
+    @apply text-center font-semibold text-white text-sm mr-2 px-2.5 py-0.5 rounded bg-zn-amarillo;
+}
+.is_invalid {
+    @apply border border-red-500;
+}
