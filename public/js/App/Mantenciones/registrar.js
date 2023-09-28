@@ -35,7 +35,7 @@ function cargarGrilla () {
 }
 
 
-function validarFormularioDireccion (formulario) {
+function validarFormularioRegistro (formulario) {
 
   gestionar_nube();
   var formulario_valido = true;
@@ -110,7 +110,7 @@ $(document).ready(function(){
   });
 
   $('#form-mantencion').submit(function(event) {
-    if ( validarFormularioDireccion ('form-mantencion') ) {
+    if ( validarFormularioRegistro ('form-mantencion') ) {
       $(this).unbind('submit').submit();
     } else {
       event.preventDefault();
