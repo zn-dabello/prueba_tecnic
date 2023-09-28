@@ -46,7 +46,7 @@ class RegistrarController extends Controller
         $tipo_registros_historial = HistorialTipoRegistro::filtroGrilla();
         $historial_acciones = accionesFiltroHistorial('Aplicaciones');
         $historial_tipo_modulo = 3;
-        $modulo_historial = 'direcciones';
+        $modulo_historial = 'registrarse';
         $link_ayuda = '#';
         $modulo_sistema = 'Mantencion';
         $sub_modulo_sistema = 'Registrar';
@@ -153,7 +153,7 @@ class RegistrarController extends Controller
     {
 
         $title_section = "Mantenciones / Registro";
-        $ruta = $tipo == 'actualizar' ? "mantencion/registrar/editar" : "mantencion/registrar" ;
+        $ruta = $tipo == 'actualizar' ? "mantencion/registrar/editar" : "mantencion/registrarse" ;
         $metodo = $tipo == 'actualizar' ? "POST" : '';
 
         /** Se obtiene la información */
@@ -289,7 +289,11 @@ class RegistrarController extends Controller
     private function arrayDatosModificados($request, $registro)
     {
         $campos = [
-            'descripcion',
+            'fecha_mantencion',
+            'numero_equipo',
+            'marca_equipo',
+            'ubicacion',
+            'proveedor',
             'estado_id'
         ];
         $campos_label = [7,5];
@@ -319,7 +323,7 @@ class RegistrarController extends Controller
             $info['cliente_id']     =   session('plataforma.user.cliente.id');
             $info['nombre_user']    =   Auth::user()->nombre.' '. Auth::user()->apellido;
             $info['encargado']         =   session('plataforma.encargado');;
-            $info['direcciones']      =   $this->registro::obtenerInformacionXlsx($info['cliente_id'], $buscar);
+            $info['registrarse']      =   $this->registro::obtenerInformacionXlsx($info['cliente_id'], $buscar);
             $info['filtros']        =   $buscar;
             $nombre_aplicacion = env('APP_NAME') ;
             $fecha = date('d-m-Y H_i') ;
